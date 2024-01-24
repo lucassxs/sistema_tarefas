@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Tarefa</title>
+</head>
+<body>
+    <h1>Editar Tarefa</h1>
+    <form method="post">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" value="{{ tarefa['titulo'] }}" required>
+        <br>
+        <label for="descricao">Descrição:</label>
+        <textarea id="descricao" name="descricao" required>{{ tarefa['descricao'] }}</textarea>
+        <br>
+        <label for="status">Status:</label>
+        <select id="status" name="status" required>
+            <option value="Pendente" {% if tarefa['status'] == 'Pendente' %}selected{% endif %}>Pendente</option>
+            <option value="Em Andamento" {% if tarefa['status'] == 'Em Andamento' %}selected{% endif %}>Em Andamento</option>
+            <option value="Concluída" {% if tarefa['status'] == 'Concluída' %}selected{% endif %}>Concluída</option>
+        </select>
+        <br>
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
