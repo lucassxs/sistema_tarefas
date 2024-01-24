@@ -13,4 +13,4 @@ A aplicação deve gravar os dados em um arquivo JSON.
 ## Configuração 
 
 #### Executar localmente
-Para executar o sitema, é necessário executar o script `arquivo.py`. Abrir um navegador e acessar http://127.0.0.1:5000/ para interagir com o sistema.
+Para executar o sitema, é necessário executar o script `run.py` no console do terminal. Abrir um navegador e acessar http://127.0.0.1:5000/ para interagir com o sistema.
